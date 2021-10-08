@@ -1,0 +1,12 @@
+# Configuration file for connecting to a local Kafka Cluster.
+server.port: 8088
+spring:
+  kafka:
+    streams:
+      application-id: streams-tree-join-app
+      properties:
+        acks: all
+        num.stream.threads: 2
+        bootstrap:
+          servers: localhost:9092
+        security.protocol: PLAINTEXT

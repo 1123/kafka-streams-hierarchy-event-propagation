@@ -1,0 +1,18 @@
+# Configuration file for connecting to Confluent Cloud.
+server.port: 8088
+spring:
+  kafka:
+    streams:
+      application-id: streams-tree-join-app
+      properties:
+        acks: all
+        num.stream.threads: 2
+        security:
+          protocol: SASL_SSL
+        bootstrap:
+          servers: <INSERT API ENPOINT HERE>:9092
+        sasl:
+          jaas:
+            config: org.apache.kafka.common.security.plain.PlainLoginModule required username='INSERT API KEY HERE' password='INSERT API SECRET HERE';
+          mechanism: PLAIN
+

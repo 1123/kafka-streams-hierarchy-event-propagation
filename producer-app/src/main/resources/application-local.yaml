@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    properties:
+      bootstrap:
+        servers: localhost:9092
+      security:
+        protocol: PLAINTEXT
+
+
